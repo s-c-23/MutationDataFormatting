@@ -6,11 +6,11 @@ import re
 
 
 #Parses through fasta file to get fasta sequence
-for record in SeqIO.parse("P0DP23.fasta","fasta"):
+for record in SeqIO.parse("data/P0DP23.fasta","fasta"):
     current_seq = record.seq
 
 #Gets column titles for mutations using a spreadsheet for a simple protein
-proteinExample = pd.read_csv(r'1L2Y.csv') 
+proteinExample = pd.read_csv(r'data/1L2Y.csv') 
 proteinExample_titles = list(proteinExample.columns.values)
 proteinExample_titles.remove('Unnamed: 0')
 
